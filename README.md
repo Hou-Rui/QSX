@@ -1,5 +1,18 @@
-                        README FILE FOR SPIM, XSPIM, PCSPIM, and QTSPIM
-                        ===============================================
+README for QSX
+===================
+Qt Spim eXtended (QSX) is a working-in-progress improvement for QtSpim. Below is the working progress:
+
+- Provide more system calls in SPIM emulator    [  DONE  ]
+- Provide documentation for new system calls    [  TODO  ]
+- Provide syntax highlighting                   [  DONE  ]
+- Change dock windows into a integrated view    [  DONE  ]
+- Provide full CSS-customizable user interface  [  WIP   ]
+- Remove PCSpim and XSpim                       [  TODO  ]
+- Redraw icons in a modern style                [  TODO  ]
+
+
+README FILE FOR SPIM, XSPIM, PCSPIM, and QTSPIM
+===============================================
 
 This directory contains SPIM--an assembly language MIPS32 simulator.
 
@@ -40,15 +53,15 @@ GNU Lesser General Public License, version 2.1  http://www.gnu.org/licenses/old-
 GNU Lesser General Public License, version 3  http://www.gnu.org/licenses/lgpl-3.0.html
 
 
-                                      GETTING SPIM SOURCE
-                                      ===================
+GETTING SPIM SOURCE
+===================
 
 Spim is hosted on SourceForge and its source code is available through SVN:
 https://sourceforge.net/projects/spimsimulator/
 
 
-                                          DIRECTORIES
-                                          ===========
+DIRECTORIES
+===========
 
 The subdirectories can be divided into two categories.
 
@@ -78,8 +91,8 @@ The subdirectories can be divided into two categories.
              X Windows library that is no longer supported by the Mac.) [Obsolete]
 
 
-                                        BUILDING QTSPIM
-                                        ===============
+BUILDING QTSPIM
+===============
 
 It is generally not necessary to build QtSpim as the Spim website contains an installable
 version for most systems.
@@ -126,8 +139,8 @@ the packages that contain all of these files for Qt5, so it is easier just to re
 everything.
 
 
-                                    BUILDING SPIM and XSPIM
-                                    =======================
+BUILDING SPIM and XSPIM
+ =======================
 
 It is necessary to build spim and xspim, as they are only distributed as source.
 
@@ -136,7 +149,7 @@ It is necessary to build spim and xspim, as they are only distributed as source.
    spimsimulator repository (http://spimsimulator.sourceforge.net) or
    by downloading the source code (https://sourceforge.net/projects/spimsimulator/files).
 
-   2. Decompress the file, using either the program uncompress for the first file or gzip for
+   1. Decompress the file, using either the program uncompress for the first file or gzip for
       the second file:
 
           % uncompress spim.tar.Z
@@ -145,17 +158,17 @@ It is necessary to build spim and xspim, as they are only distributed as source.
 
           % gzip -d spim.tar.gz
 
-   3. Move the file spim.tar to the directory in which you want to build spim and untar it:
+   2. Move the file spim.tar to the directory in which you want to build spim and untar it:
 
           % tar xf spim.tar
 
       It will create a directory named spim-8.0 (or the most recent version number).
 
-   4. The simple terminal interface is contained in the spim-8.0/spim directory and the
+   3. The simple terminal interface is contained in the spim-8.0/spim directory and the
    X-windows interfaces is in the spim-8.0/xspim directory. The other directories are described
    in the README file.
 
-   5. Next, you must set the directories in which spim will be installed by editing the Makefile
+   1. Next, you must set the directories in which spim will be installed by editing the Makefile
    (the file that contains instructions on building spim). In general, if you are installing
    spim and want the windowing version (xspim), edit the file xspim/Imakefile. If you don't want
    xspim or are running on a system without X-windows installed, you use the file spim/Makefile.
@@ -170,7 +183,7 @@ It is necessary to build spim and xspim, as they are only distributed as source.
 
       In general, the remaining parameters in a Makefile need not be changed.
 
-   6. Then, if you are building xspim, change to the spim-8.0/xspim directory and type:
+   1. Then, if you are building xspim, change to the spim-8.0/xspim directory and type:
 
           % xmkmf
           % make
@@ -179,11 +192,11 @@ It is necessary to build spim and xspim, as they are only distributed as source.
       beware that it may not work on your system because the paths to the X windows libraries
       could be different.
 
-   7. If you do not have X-windows, change to thespim-8.0/spim directory, edit Makefile, and type:
+   2. If you do not have X-windows, change to thespim-8.0/spim directory, edit Makefile, and type:
 
           % make
 
-   8. To run spim or xspim, the exception handler must be installed in the directory specified
+   3. To run spim or xspim, the exception handler must be installed in the directory specified
    by the variable EXCEPTION_DIR in the Makefile. If the file exception.s is not installed, spim
    and xspim fail before they start running. You can either install this file by hand or by
    typing:
@@ -195,7 +208,7 @@ It is necessary to build spim and xspim, as they are only distributed as source.
 
           % sudo make install
 
-   9. To test that spim is correctly built, change to the spim-8.0/spim directory and type:
+   1. To test that spim is correctly built, change to the spim-8.0/spim directory and type:
 
           % make test
 
@@ -203,8 +216,8 @@ It is necessary to build spim and xspim, as they are only distributed as source.
       running the test.)
 
 
-                                        BUILDING PCSPIM
-                                        ===============
+BUILDING PCSPIM
+===============
 
 It is not necessary to compile PCSpim (the Microsoft Windows version), as the Spim web site
 contains a precompiled version.
@@ -217,8 +230,8 @@ Cygwin port of the GNU tools (see www.cygwin.com).
 
 
 
-                                      NEW VERSIONS OF SPIM
-                                      ===================
+NEW VERSIONS OF SPIM
+===================
 
 I generally release new version of SPIM once a year, before a semester boundary (late August or
 early January).  The new version are available on:
