@@ -1,0 +1,31 @@
+.qsx-title {
+    font-weight: bold;
+}
+
+.qsx-reg {
+    color: maroon;
+}
+
+.qsx-word {
+    color: navy;
+}
+
+.qsx-address {
+    color: maroon;
+ }
+
+.qsx-char {
+    color: green;
+}
+
+.qsx-int, .qsx-float, .qsx-double {
+    color: green;
+}
+
+.qsx-comment {
+    color: grey;
+}
+
+.qsx-inst, .qsx-bin-inst {
+    color: navy;
+}
